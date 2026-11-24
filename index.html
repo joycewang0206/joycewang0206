@@ -1002,7 +1002,7 @@
     <p class="tagline">親子旅行 × 美食生活 × 情境短影音</p>
     <p class="cta-line">幫家庭找到值得出發的地方，<br>也幫品牌把體驗變成想收藏、想行動的內容。</p>
     <div class="statbar">
-      <div><span class="stat-num">15萬</span><span class="stat-label">30天瀏覽</span></div>
+      <div><span class="stat-num">25萬</span><span class="stat-label">30天瀏覽</span></div>
       <div><span class="stat-num">100+</span><span class="stat-label">口袋名單</span></div>
       <div><span class="stat-num">全台</span><span class="stat-label">收集中</span></div>
     </div>
@@ -1012,12 +1012,6 @@
     </div>
   </div>
 
-  <div class="fan-hook">
-    <div class="fan-hook-title">今天想去哪裡玩？</div>
-    <p class="fan-hook-sub">景點、住宿、美食，我把實地走訪、停車與預約資訊整理好了。</p>
-    <button class="fan-hook-btn" id="fanAskAI" type="button">✨ 問 Joyce AI｜幫我找行程</button>
-    <p class="fan-hook-note">追蹤 IG，持續解鎖親子出遊與在地美食口袋名單。</p>
-  </div>
   <div class="section-label" id="freshLabel"><span class="mini-pikmin" style="--pik-color:#6FC073;"></span><span>🆕 本週新增</span><span class="mini-pikmin" style="--pik-color:#6FC073;animation-delay:0.15s;"></span></div>
   <div class="list" id="freshList">
     <div class="postcard cat-kid" data-cat="kid" data-cats="kid hotel spot">
@@ -2789,7 +2783,7 @@
 
     <div class="brand-subtitle">代表成效</div>
     <div class="brand-metrics">
-      <div class="brand-metric"><b>15萬+</b><span>近 30 天內容觸及</span></div>
+      <div class="brand-metric"><b>25萬+</b><span>近 30 天內容觸及</span></div>
       <div class="brand-metric"><b>116 支</b><span>已發布短影音內容</span></div>
       <div class="brand-metric"><b>10.6萬</b><span>單支最高觀看</span></div>
       <div class="brand-metric"><b>4.5萬</b><span>親子景點代表案例</span></div>
@@ -3053,7 +3047,6 @@
   // ---------- 3. UI ----------
   var root = document.createElement('div');
   root.innerHTML =
-    '<button class="jai-fab" id="jaiFab"><span class="jai-fab-avatar">🐷<span class="jai-fab-spark">AI</span></span><span class="jai-fab-label"><small>AI 小助手</small>問 Joyce</span></button>' +
     '<div class="jai-panel" id="jaiPanel">' +
       '<div class="jai-header">' +
         '<div><div class="jai-header-title">💕 Joyce AI 旅遊小助手</div><div class="jai-header-sub">幫你找好吃、好玩、好住的地方</div></div>' +
@@ -3067,7 +3060,7 @@
     '</div>';
   document.body.appendChild(root);
 
-  var fab = document.getElementById('jaiFab');
+  var fab = document.getElementById('jaiFab') || document.createElement('div');
   var panel = document.getElementById('jaiPanel');
   var closeBtn = document.getElementById('jaiClose');
   var body = document.getElementById('jaiBody');
